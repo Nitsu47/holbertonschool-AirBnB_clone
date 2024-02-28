@@ -16,7 +16,7 @@ class BaseModel:
     def __str__(self):
         """returns a string with class name, id and dict object"""
         return ("[{}] (<{}>) <{}>".format
-                (self.__class__.__name__, self.id, self.__dict__))
+                (type(self.__name__), self.id, self.__dict__))
 
     def save(self):
         """updates the attr updated_at with current datetime"""
@@ -27,5 +27,5 @@ class BaseModel:
         saved_dict = self.__dict__.copy()
         saved_dict['created_at'] = self.created_at.isoformat()
         saved_dict['updated_at'] = self.updated_at.isoformat()
-        saved_dict['__class__'] = self.__class__.__name__
+        saved_dict['__class__'] = type(self).__name__
         return saved_dict
