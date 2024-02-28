@@ -7,11 +7,9 @@ from datetime import datetime
 class BaseModel:
     """Defines all common attributes/methods for other classes"""
 
-    unic_id = uuid.uuid4()
-
     def __init__(self, id=None):
         """inits id and datetimes for creation and modification"""
-        self.id = id if id else str(uuid.uuid4())
+        self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
 
