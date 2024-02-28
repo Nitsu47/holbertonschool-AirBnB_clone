@@ -17,7 +17,7 @@ class BaseModel:
 
     def __str__(self):
         """returns a string with class name, id and dict object"""
-        return ("[<class {}>] (<{}>) <{}>".format
+        return ("[{}] (<{}>) <{}>".format
                 (self.__class__.__name__, self.id, self.__dict__))
 
     def save(self):
