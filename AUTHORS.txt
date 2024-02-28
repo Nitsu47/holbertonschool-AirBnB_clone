@@ -1,0 +1,4 @@
+# This file lists all contributors to the repository.
+
+Nitsu47 <6758@holbertonstudents.com>
+Bigguvix <6779@holbertonstudents.com>
