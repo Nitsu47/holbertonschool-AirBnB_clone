@@ -22,5 +22,10 @@ class HBNBCommand(cmd.Cmd):
         """shows availables help topics"""
         print(self.h_list)
 
+    def emptyline(self):
+        """does nothing when empty lines or spaces"""
+        pass
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
