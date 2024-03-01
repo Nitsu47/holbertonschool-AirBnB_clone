@@ -33,6 +33,7 @@ class FileStorage:
         data_dict = {}
         classes = {
             "BaseModel": BaseModel
+            "User": User
         }
         try:
             with open(self.__file_path, 'r') as f:
