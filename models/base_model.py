@@ -9,6 +9,7 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """inits id and datetimes for creation and modification"""
+        from . import storage
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
@@ -19,6 +20,7 @@ class BaseModel:
         else:
             self.id = str(uuid.uuid4())
             self.created_at = self.updated_at = datetime.now()
+            storage.new(self)
 
     def __str__(self):
         """returns a string with class name, id and dict object"""
@@ -27,7 +29,9 @@ class BaseModel:
 
     def save(self):
         """updates the attr updated_at with current datetime"""
+        from . import storage
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of  the instance"""
