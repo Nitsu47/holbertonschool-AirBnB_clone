@@ -34,7 +34,12 @@ class FileStorage:
         data_dict = {}
         classes = {
             "BaseModel": BaseModel,
-            "User": User
+            "User": User,
+            "State": State,
+            "City": City,
+            "Amenity": Amenity,
+            "Place": Place,
+            "Review": Review
         }
         try:
             with open(self.__file_path, 'r') as f:
