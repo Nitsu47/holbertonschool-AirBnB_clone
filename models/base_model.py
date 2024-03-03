@@ -2,6 +2,7 @@
 """Creates class Base Model to inherit for future classes"""
 import uuid
 from datetime import datetime
+import models
 
 
 class BaseModel:
