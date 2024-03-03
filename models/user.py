@@ -2,6 +2,7 @@
 from models.base_model import BaseModel
 """Creates a class named User"""
 
+
 class User(BaseModel):
     email: str = ""
     password: str = ""
