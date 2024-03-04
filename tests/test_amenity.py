@@ -2,6 +2,7 @@
 """Test for amenity class"""
 import unittest
 from models.amenity import Amenity
+from models.base_model import BaseModel
 
 class TestAmenity(unittest.TestCase):
     def test_amenity_attr(self):
